@@ -54,7 +54,7 @@ for symbol in symbols:
         st.line_chart(df[['Close', 'ma20']])
 
         # Telegram message
-        message = f"{symbol} Signal @ {datetime.datetime.now().strftime('%H:%M:%S')}:
+        message = f"{telegram} Signal @ {datetime.datetime.now().strftime('%H:%M:%S')}:
 " + "\n".join(signals)
         bot.send_message(chat_id=CHAT_ID, text=message)
 
